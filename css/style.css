@@ -26,12 +26,14 @@
     position: relative;
 }
 .dbtm-img {
-    width: 100%;
+    width: 90%;
+	display: block;
+	margin: 0 auto
 }
 .img-abs-top {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 5%;
 }
 .dbtm-button {
     display: block;
@@ -81,7 +83,7 @@
 }
 .bdtm-tienve-list {
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
     left: 0;
     width: 100%;
     height: 75.6998880179%;
@@ -110,7 +112,7 @@
 }
 .dbtm-hauve-list {
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
     right: 0;
     width: 97.641509434%;
     height: 76.9850402762%;
@@ -141,7 +143,7 @@
 }
 .dbtm-thumon-list {
     position: absolute;
-    bottom: 0;
+    bottom: -5%;
     left: 0;
     width: 100%;
     height: 83.0729166667%;
@@ -153,7 +155,7 @@
 }
 .dbtm-credit {
     position: absolute;
-    bottom: -2%;
+    bottom: -10%;
     left: 0;
     width: 100%;
 }
