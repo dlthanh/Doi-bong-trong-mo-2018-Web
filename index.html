@@ -23,12 +23,25 @@
                 pagination: {
                     el: '.dbtm-paging',
                     clickable: true
+                },
+                on: {
+                    slideChangeTransitionStart: function() {
+                        if(bdtm.activeIndex == ($('.dbtm-item').length - 1)) {
+                            $('.dbtm-arrow').fadeOut(600);
+                        } else {
+                            $('.dbtm-arrow').fadeIn(600);
+                        }
+                    }
                 }
             });
 
             $("[data-fancybox]").fancybox({
                 touch: false
-            })
+            });
+
+            $('.dbtm-arrow').click(function() {
+                bdtm.slideNext(600);
+            });
         })
     </script>
 </head>
@@ -146,6 +159,10 @@
             </div>
 
             <div class="dbtm-paging swiper-pagination"></div>
+
+            <div class="dbtm-arrow">
+                <img src="images/btn-arrow.png" alt="">
+            </div>
         </div>
 
         <div id="hidden1" class="dbtm-popup" style="display: none;">
@@ -202,7 +219,7 @@
                     <img src="images/title-popup-3.png" alt="">
 
                     <div class="dbtm-content">
-                        <p>Tại chung kết "Britain's Got Talent 2018", Quốc Cơ - Quốc Nghiệp đã khiến người hâm mộ toàn thế giới sửng sốt khi thực hiện cú nhảy sinh tử từ trong tư thế "người chồng người". Dù chỉ lọt vào Top 5 chung cuộc nhưng hình ảnh 2 anh em nhưng cầu thủ tiền vệ cánh trái ấy, đã khuấy đảo sân bóng cảm xúc, tự hào của hàng chục triệu người Việt. “Đây là đẳng cấp Olympic chứ không phải một cuộc thi tài năng. Tôi sẽ nhớ màn diễn này suốt đời” – Giám khảo khó tính Simon Cowell thán phục. </p>
+                        <p>Tại chung kết "Britain's Got Talent 2018", Quốc Cơ - Quốc Nghiệp đã khiến người hâm mộ toàn thế giới sửng sốt khi thực hiện cú nhảy sinh tử từ trong tư thế "người chồng người". Dù chỉ lọt vào Top 5 chung cuộc nhưng hình ảnh cầu thủ tiền vệ cánh trái ấy, đã khuấy đảo sân bóng cảm xúc, tự hào của hàng chục triệu người Việt. “Đây là đẳng cấp Olympic chứ không phải một cuộc thi tài năng. Tôi sẽ nhớ màn diễn này suốt đời” – Giám khảo khó tính Simon Cowell thán phục. </p>
 
                         <p>Để có được vinh quang ấy, những nghệ sĩ xiếc như Cơ – Nghiệp phải dành cả tuổi thanh xuân khổ luyện, thậm chí thường xuyên đối mặt với hiểm nguy tính mạng. "Chúng tôi muốn thể hiện được tinh thần bất khuất của người Việt Nam. Người Việt Nam luôn ngẩng cao đầu" – Cơ, Nghiệp khẳng định.</p>
                     </div>
@@ -228,7 +245,7 @@
 
                         <p>Trong khi kỷ lục này được công bố ngày 24/12 tại BV Việt Đức, ở đầu kia đất nước, bé Huy - được ghép một quả thận của anh Quý - đang bước những bước bình phục ở BV Nhi đồng 2. Bé tỉnh táo, tự ăn uống, hồng hào, nói cười vui vẻ.</p>
 
-                        <p>Kỷ lục hiến tạng của tiền vệ Dương Hồng Quý, không chỉ cứu được 6 người. Tinh thần thi đấu quả cảm đến hơi thở cuối cùng ấy, sẽ truyền cảm hứng cho hàng ngàn pha kiến tạo khác hồi sinh bao số phận, trên sân bóng cuộc đời.</p>
+                        <p>Kỷ lục hiến tạng của tiền vệ Dương Hồng Quý không chỉ cứu được 6 người. Tinh thần thi đấu quả cảm đến hơi thở cuối cùng ấy sẽ truyền cảm hứng cho hàng ngàn pha kiến tạo khác hồi sinh bao số phận trên sân bóng cuộc đời.</p>
                     </div>
                 </div>
             </div>
@@ -292,7 +309,7 @@
                     <div class="dbtm-content">
                         <p>Suốt hơn 3 năm, lão nông Phạm Tấn Lực liên tục thu thập chứng cứ gửi đến các cơ quan chức năng tố cáo những sai phạm trong khi thi công dự án cao tốc Đà Nẵng Quảng Ngãi có vốn đầu tư hơn 34 nghìn tỉ đồng. </p>
 
-                        <p>Hành trình của lão nông phải chịu đựng những lời đe dọa tính mạng, những trận đòn thù và không ít lần từ chối "những viên đạn bọc đường". Dù phải xin tiền vợ con để tìm ra sự thật, ông Lực vẫn không nản chí.</p>
+                        <p>Trên hành trình tìm sự thật, lão nông gặp không ít những lời đe dọa tính mạng, những trận đòn thù và nhiều lần từ chối "những viên đạn bọc đường". Dù phải xin tiền vợ con để tìm ra sự thật, ông Lực vẫn không nản chí.</p>
 
                         <p>Nhờ sự chốt chặn hiệu quả của hậu vệ cánh này, mà những “tiền đạo sai phạm” đã bị rút thẻ đỏ, đưa ra ánh sáng. “Nhiều người nói tôi làm không công, đã nghèo còn muốn làm anh hùng nhưng tôi không nghĩ vậy. Tôi muốn những việc làm sai trái được kiểm tra, xử lý” – ông Lực nói</p>
                     </div>
@@ -356,11 +373,11 @@
                     <img src="images/title-popup-10.png" alt="">
 
                     <div class="dbtm-content">
-                        <p>"Tôi đã vô cùng xúc động khi được biết Hải An bé nhỏ đã trò chuyện về việc hiến mô tạng cùng mẹ của mình khi con đang vật lộn với đau đớn trên giường bệnh. Con đã làm được một điều khó tin nhưng là sự thật" - Bộ trưởng Y tế Nguyễn Thị Kim Tiến viết lời từ biệt Hải An (7 tuổi). Bé mất chiều 22/8/2018 vì căn bệnh u não quái ác.</p>
+                        <p>"Tôi đã vô cùng xúc động khi được biết Hải An bé nhỏ đã trò chuyện về việc hiến mô tạng cùng mẹ của mình khi con đang vật lộn với đau đớn trên giường bệnh. Con đã làm được một điều khó tin nhưng là sự thật" - Bộ trưởng Y tế Nguyễn Thị Kim Tiến viết lời từ biệt Hải An (7 tuổi). Bé mất chiều 22/2/2018 vì căn bệnh u não quái ác.</p>
 
                         <p>Quy định của pháp luật chỉ cho phép nhận tạng người từ 18 tuổi trở lên, nên bệnh viện chỉ có thể nhận giác mạc hiến từ Hải An. "Món quà ánh sáng" của bé được trao cho hai người.</p>
 
-                        <p>Không chỉ khiến hàng triệu trái tim xúc động, trong "trận đấu của nhân tâm", "hậu vệ cánh" nhỏ bé Hải An đã truyền cảm hứng để số người thổi đăng ký hiến mô tạng ở VN tăng đột biến</p>
+                        <p>Không chỉ khiến hàng triệu trái tim xúc động, trong "trận đấu của nhân tâm", "hậu vệ cánh" nhỏ bé Hải An đã truyền cảm hứng để số người đăng ký hiến mô tạng ở VN tăng đột biến</p>
                     </div>
 
                     <a href="http://soha.vn/thien-su-7-tuoi-hien-giac-mac-con-yeu-me-me-dung-quen-con-nhe-20181217151034573.htm" target="_blank">
@@ -382,7 +399,7 @@
                     <div class="dbtm-content">
                         <p>“Ủy ban Kiểm tra Trung ương đã hoạt động tích cực, theo phương châm 'nói ít làm nhiều' và được ví như 'thanh bảo kiếm' quyết diệt trừ nạn tham nhũng, chạy chức, chạy quyền. Nhìn vào kết quả công việc, có thể khẳng định cơ quan này đã xử lý khối lượng công việc khổng lồ” - ông Vũ Quốc Hùng, nguyên Phó chủ nhiệm Thường trực Ủy ban Kiểm tra Trung ương nhận xét.</p>
 
-                        <p>Hơn 20 năm làm công tác đảng, theo ông Hùng câu chuyện kỷ luật cán bộ trong Đảng không phải bây giờ mới có nhưng trước đây, kỷ luật thường mới chỉ dừng ở mức phê phán chung chung. Còn nay, Ủy ban Kiểm tra đã chỉ ra đúng người, đúng tội. Không chỉ xử lý về mặt nội bộ mà còn cả mặt pháp luật. Vì vậy Ủy ban Kiểm tra được ví là "thanh bảo kiếm của Đảng".</p>
+                        <p>Hơn 20 năm làm công tác Đảng, theo ông Hùng câu chuyện kỷ luật cán bộ trong Đảng không phải bây giờ mới có nhưng trước đây, kỷ luật thường mới chỉ dừng ở mức phê phán chung chung. Còn nay, Ủy ban Kiểm tra đã chỉ ra đúng người, đúng tội. Không chỉ xử lý về mặt nội bộ mà còn cả mặt pháp luật. Vì vậy Ủy ban Kiểm tra được ví là "thanh bảo kiếm của Đảng".</p>
                     </div>
                 </div>
             </div>
