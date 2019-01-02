@@ -191,11 +191,14 @@
     color: #104c2f;
     text-decoration: none;
 }
+.dbtm-right a:hover {
+	text-decoration: underline;
+}
 .dbtm-right a::before {
     content: '';
     display: inline-block;
-    height: 1.35416666667vw;
-    width: 1.25vw;
+    height: 2.35416666667vw;
+    width: 8.25vw;
     background: url('../images/arrow.png') no-repeat center;
     background-size: contain;
     vertical-align: middle;
